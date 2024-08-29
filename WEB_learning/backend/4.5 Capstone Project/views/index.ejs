@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs")%>
+<h1>HI！</h1>
+<form action="/submit" method="POST">
+    <input type="text" name="name" placeholder="Name">
+    <textarea type="text" name="post" placeholder="Comment"></textarea>
+    <input type="submit" value="OK">
+</form>
+<% if (locals.contractOfPost){ %>
+    <% for(let i=0; i<contractOfPost.length; i++){ %>
+    <p>
+        <%=contractOfPost[i]%>
+    </p>
+    <% } %>
+<% } else { %>
+    
+<% } %>
+
+<%- include("partials/footer.ejs")%>
